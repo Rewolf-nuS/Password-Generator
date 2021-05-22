@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon-180x180.png" sizes="180x180" />
+    <link rel="icon" href="./img/icon-512x512.png" type="image/png" sizes="512x512" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="index.min.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1__title">Password Generator</h1>
+      <input class="parts__form" type="text" readonly tabindex="-1" />
+      <button class="parts__btn" tabindex="0">Create Password</button>
+      <div class="option">
+        <h2 class="option__title">OPTIONS</h2>
+        <div class="block">
+          <span>数字</span>
+          <input id="rule_numeric" type="checkbox" checked />
+          <label for="rule_numeric"></label>
+        </div>
+        <div class="block">
+          <span>英大文字</span>
+          <input id="rule_uppercase" type="checkbox" checked />
+          <label for="rule_uppercase"></label>
+        </div>
+        <div class="block">
+          <span>英小文字</span>
+          <input id="rule_lowercase" type="checkbox" checked />
+          <label for="rule_lowercase"></label>
+        </div>
+        <div class="block">
+          <span>記号</span>
+          <input id="rule_symbol" type="checkbox" />
+          <label for="rule_symbol"></label>
+        </div>
+        <div>長さ<input type="number" id="rule_length" value="16" /></div>
+      </div>
+    </div>
+    <script src="./password.js"></script>
+  </body>
+</html>

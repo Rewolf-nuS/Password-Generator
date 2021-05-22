@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  background-color: rgb(21, 33, 75);
+  color: rgb(206, 203, 55);
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1__title {
+  text-shadow: 0 2px 5px rgb(223, 197, 53);
+  margin-bottom: 4vh;
+}
+
+.parts {
+  &__form {
+    font-size: 18px;
+
+    padding: 0.5em 1.5em;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.336);
+  }
+
+  &__btn {
+    font-size: 18px;
+    margin: 2vh 0;
+    padding: 1em 3em;
+    text-decoration: none;
+    color: rgb(206, 203, 55);
+    border: solid 2px rgb(206, 203, 55);
+    border-radius: 3px;
+    transition: 0.4s;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+}
+
+#rule_length {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.block {
+  width: 150px;
+  position: relative;
+  clear: both;
+  float: left;
+  margin-bottom: 20px;
+}
+
+span {
+  letter-spacing: 1px;
+  font-size: 15px;
+  float: right;
+  width: 80px;
+  margin: 5px 0 0;
+  pointer-events: none;
+}
+
+label {
+  width: 60px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  background: #ccc;
+  float: left;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &::before {
+    transition: 0.3s ease;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: white;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    border: none;
+    color: black;
+    border-radius: 100px;
+  }
+}
+
+input[type='checkbox']:checked + label {
+  background: #55e868;
+  border-color: #55e868;
+
+  &::before {
+    left: 30px;
+  }
+}
