@@ -6,40 +6,52 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./img/apple-touch-icon-180x180.png" sizes="180x180" />
     <link rel="icon" href="./img/icon-512x512.png" type="image/png" sizes="512x512" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="index.min.css" />
+    <link rel="stylesheet" href="./css/index.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
     <title>Password Generator</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="container">
-      <h1 class="h1__title">Password Generator</h1>
-      <input class="parts__form" type="text" readonly tabindex="-1" />
+      <header>
+        <h1 class="h1__title">Password Generator</h1>
+      </header>
+      <div class="parts__form">
+        <input class="parts__input" type="text" readonly tabindex="-1" />
+        <button class="parts__input--copy"><i class="far fa-clipboard"></i></button>
+      </div>
       <button class="parts__btn" tabindex="0">Create Password</button>
       <div class="option">
         <h2 class="option__title">OPTIONS</h2>
-        <div class="block">
-          <span>数字</span>
-          <input id="rule_numeric" type="checkbox" checked />
-          <label for="rule_numeric"></label>
+        <div class="option__item">
+          <p>数字</p>
+          <input id="opt_num" type="checkbox" checked />
+          <label for="opt_num"></label>
         </div>
-        <div class="block">
-          <span>英大文字</span>
-          <input id="rule_uppercase" type="checkbox" checked />
-          <label for="rule_uppercase"></label>
+        <div class="option__item">
+          <p>英大文字</p>
+          <input id="opt_upper" type="checkbox" checked />
+          <label for="opt_upper"></label>
         </div>
-        <div class="block">
-          <span>英小文字</span>
-          <input id="rule_lowercase" type="checkbox" checked />
-          <label for="rule_lowercase"></label>
+        <div class="option__item">
+          <p>英小文字</p>
+          <input id="opt_lower" type="checkbox" checked />
+          <label for="opt_lower"></label>
         </div>
-        <div class="block">
-          <span>記号</span>
-          <input id="rule_symbol" type="checkbox" />
-          <label for="rule_symbol"></label>
+        <div class="option__item">
+          <p>記号</p>
+          <input id="opt_sign" type="checkbox" />
+          <label for="opt_sign"></label>
         </div>
-        <div>長さ<input type="number" id="rule_length" value="16" /></div>
+        <div class="option__item">
+          <p>長さ</p>
+          <input type="text" id="opt_length" value="16" size="2" maxlength="2" />
+        </div>
       </div>
+      <footer>
+        <small>&copy; 2021 Minaki-web</small>
+      </footer>
     </div>
-    <script src="./password.js"></script>
+    <script src="./js/password.js"></script>
   </body>
 </html>

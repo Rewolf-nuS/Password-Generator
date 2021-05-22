@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@900&display=swap');
 
+/*========
+変数
+========*/
+$cGold: rgb(206, 203, 55);
+
+/*========
+グローバル
+========*/
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +20,26 @@ html {
 body {
   font-family: 'Roboto', 'Noto Sans JP', sans-serif;
   background-color: rgb(21, 33, 75);
-  color: rgb(206, 203, 55);
+  color: $cGold;
 }
 
-input {
+input,
+button {
   outline: none;
   border: none;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  color: $cGold;
+}
+
+/*========
+コンテンツ
+========*/
 .container {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,30 +47,46 @@ input {
 }
 
 .h1__title {
-  text-shadow: 0 2px 5px rgb(223, 197, 53);
   margin-bottom: 4vh;
 }
 
 .parts {
   &__form {
-    font-size: 18px;
+    position: relative;
+  }
 
-    padding: 0.5em 1.5em;
-    border-radius: 20px;
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.336);
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    width: 300px;
+    font-size: 18px;
+    padding: 5px 50px 5px 20px;
+    background-color: transparent;
+    border-radius: 0%;
+    border-bottom: 1px solid $cGold;
+    color: $cGold;
+
+    &::selection {
+      background-color: transparent;
+    }
+
+    &--copy {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-53%);
+      font-size: 20px;
+    }
   }
 
   &__btn {
     font-size: 18px;
-    margin: 2vh 0;
-    padding: 1em 3em;
+    margin: 2vh 0 4vh;
+    padding: 16px 32px;
     text-decoration: none;
-    color: rgb(206, 203, 55);
-    border: solid 2px rgb(206, 203, 55);
+    border: solid 2px $cGold;
     border-radius: 3px;
     transition: 0.4s;
-    background-color: transparent;
-    cursor: pointer;
   }
 }
 
@@ -65,28 +99,33 @@ input {
     text-align: center;
     margin-bottom: 2vh;
   }
+
+  &__item {
+    width: 150px;
+    position: relative;
+    clear: both;
+    float: left;
+    margin-bottom: 2vh;
+
+    &:last-child {
+      margin-bottom: 4vh;
+    }
+  }
 }
 
-#rule_length {
+#opt_length {
   box-sizing: border-box;
   padding: 5px 10px;
-  margin-left: 10px;
   font-size: 16px;
+  border-radius: 16px;
+  width: 60px;
 }
 
 input[type='checkbox'] {
   display: none;
 }
 
-.block {
-  width: 150px;
-  position: relative;
-  clear: both;
-  float: left;
-  margin-bottom: 20px;
-}
-
-span {
+p {
   letter-spacing: 1px;
   font-size: 15px;
   float: right;
