@@ -18,35 +18,35 @@
       </header>
       <div class="parts__form">
         <input class="parts__input" type="text" readonly tabindex="-1" />
-        <button class="parts__input--copy"><i class="far fa-clipboard"></i></button>
+        <button class="parts__btn parts__btn-copy"><i class="far fa-clipboard"></i></button>
       </div>
-      <button class="parts__btn" tabindex="0">Create Password</button>
+      <button class="parts__btn parts__btn-create" tabindex="0">Create Password</button>
       <div class="option">
         <h2 class="option__title">OPTIONS</h2>
-        <div class="option__item">
+        <label class="option__item">
           <p>数字</p>
           <input id="opt_num" type="checkbox" checked />
-          <label for="opt_num"></label>
-        </div>
-        <div class="option__item">
+          <label class="switch" for="opt_num"></label>
+        </label>
+        <label class="option__item">
           <p>英大文字</p>
           <input id="opt_upper" type="checkbox" checked />
-          <label for="opt_upper"></label>
-        </div>
-        <div class="option__item">
+          <label class="switch" for="opt_upper"></label>
+        </label>
+        <label class="option__item">
           <p>英小文字</p>
           <input id="opt_lower" type="checkbox" checked />
-          <label for="opt_lower"></label>
-        </div>
-        <div class="option__item">
+          <label class="switch" for="opt_lower"></label>
+        </label>
+        <label class="option__item">
           <p>記号</p>
           <input id="opt_sign" type="checkbox" />
-          <label for="opt_sign"></label>
-        </div>
-        <div class="option__item">
+          <label class="switch" for="opt_sign"></label>
+        </label>
+        <label class="option__item">
           <p>長さ</p>
           <input type="text" id="opt_length" value="16" size="2" maxlength="2" />
-        </div>
+        </label>
       </div>
       <footer>
         <small>&copy; 2021 Minaki-web</small>

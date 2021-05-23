@@ -26,7 +26,6 @@ function setPassword() {
   target.value = generatePassword(opt_length);
 }
 
-let copy_btn = document.querySelector('.parts__input--copy');
 function savePassword() {
   target.select();
   document.execCommand('copy');
@@ -49,5 +48,5 @@ function savePassword() {
   });
 }
 
-document.querySelector('.parts__btn').addEventListener('click', setPassword);
-copy_btn.addEventListener('click', savePassword);
+document.querySelector('.parts__btn-create').addEventListener('click', setPassword);
+document.querySelector('.parts__btn-copy').addEventListener('click', savePassword);

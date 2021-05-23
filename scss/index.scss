@@ -27,6 +27,7 @@ input,
 button {
   outline: none;
   border: none;
+  font-size: 18px;
 }
 
 button {
@@ -59,7 +60,6 @@ button {
     box-sizing: border-box;
     display: block;
     width: 300px;
-    font-size: 18px;
     padding: 5px 50px 5px 20px;
     background-color: transparent;
     border-radius: 0%;
@@ -69,24 +69,31 @@ button {
     &::selection {
       background-color: transparent;
     }
+  }
 
-    &--copy {
+  &__btn {
+    transition: text-shadow 0.3s ease;
+
+    &-create {
+      margin: 2vh 0 4vh;
+      padding: 16px 32px;
+      text-decoration: none;
+      border: solid 2px $cGold;
+      border-radius: 3px;
+      transition: 0.4s;
+    }
+
+    &-copy {
       position: absolute;
       top: 50%;
       right: 18px;
       transform: translateY(-53%);
       font-size: 20px;
     }
-  }
 
-  &__btn {
-    font-size: 18px;
-    margin: 2vh 0 4vh;
-    padding: 16px 32px;
-    text-decoration: none;
-    border: solid 2px $cGold;
-    border-radius: 3px;
-    transition: 0.4s;
+    &:hover {
+      text-shadow: 0 0 3px $cGold;
+    }
   }
 }
 
@@ -134,7 +141,7 @@ p {
   pointer-events: none;
 }
 
-label {
+.switch {
   width: 60px;
   height: 30px;
   box-sizing: border-box;
