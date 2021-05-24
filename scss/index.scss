@@ -120,18 +120,18 @@ button {
   }
 }
 
-#opt_sign-text {
-  @extend #opt_length;
-  width: 100% !important;
-  margin-top: 2vh;
-}
-
 #opt_length {
   box-sizing: border-box;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 16px;
   width: 60px;
+}
+
+#opt_sign-text {
+  @extend #opt_length;
+  width: 100% !important;
+  margin-top: 2vh;
 }
 
 input[type='checkbox'] {
