@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@900&display=swap');
 
-/*========
+/*=========
 変数
-========*/
+=========*/
 $cGold: rgb(206, 203, 55);
 
-/*========
+/*=========
 グローバル
-========*/
+=========*/
 * {
   margin: 0;
   padding: 0;
@@ -36,9 +36,9 @@ button {
   color: $cGold;
 }
 
-/*========
+/*=========
 コンテンツ
-========*/
+=========*/
 .container {
   min-height: 90vh;
   display: flex;
@@ -118,6 +118,12 @@ button {
       margin-bottom: 4vh;
     }
   }
+}
+
+#opt_sign-text {
+  @extend #opt_length;
+  width: 100% !important;
+  margin-top: 2vh;
 }
 
 #opt_length {

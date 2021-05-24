@@ -1,7 +1,7 @@
 let password_numeric = '1234567890';
 let password_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let password_lowercase = 'abcdefghijklmnopqrstuvwxyz';
-let password_symbol = '-_';
+let password_symbol = document.querySelector('#opt_sign-text');
 let target = document.querySelector('.parts__input');
 
 function generatePassword(length) {
@@ -13,7 +13,7 @@ function generatePassword(length) {
   if (document.querySelector('#opt_num').checked) password_base += password_numeric;
   if (document.querySelector('#opt_upper').checked) password_base += password_uppercase;
   if (document.querySelector('#opt_lower').checked) password_base += password_lowercase;
-  if (document.querySelector('#opt_sign').checked) password_base += password_symbol;
+  if (document.querySelector('#opt_sign').checked) password_base += password_symbol.value;
   for (let i = 0; i < length; i++) {
     password += password_base.charAt(Math.floor(Math.random() * password_base.length));
   }
